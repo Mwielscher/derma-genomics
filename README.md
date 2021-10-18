@@ -17,9 +17,9 @@ __The architecture including all necessary components is given below:__
 <p align="center">
 <img src="/png/architecture.png" alt="architecture" width="700"/>
 <br/><br/>
+  
 
-
-## set up your GCP project
+## set up your GCP project  
 
 * __Setup a google project__ with an active billing acount. You need to be __Owner__ or at least __????Editor???__ in the project to be able to set up and run the described workflow.
 * __Enable the Life Science API__: In the search box at the top search for Life Sciences API, select the API then Click on the Enable button. 
@@ -44,7 +44,7 @@ __The architecture including all necessary components is given below:__
 
 
 
-## provision and set up a Cromwell server
+## provision and set up a Cromwell server  
 
 I usually start with an e2-standard-4 instance and later adjust the size based on recommendation on the console. Smaller instances will still work as well.
 
@@ -95,8 +95,10 @@ java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-69.jar run ~/gatk4-somatic-snvs-
 -i ~/mutect2.inputs.json -o generic.google-papi.options.json
 ~~~
 
+  
+  
+ 
 ## Provisioning MySQL server  
-
 There are many advantages to running Cromwell with MySQL, being able to run in server mode and submit multiple Jobs, sharing output and being able to view timing charts, resuming failed pipelines, etc.
 
 The instance type and disk size depends on the number of parallel pipelines expected to run. In this tutorial I start with a n1-standard-1 instance type and 20GB SSD disk which I found to  be more than enough to run a few parallel pipelines.  
