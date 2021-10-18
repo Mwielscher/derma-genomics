@@ -8,7 +8,7 @@ sdk install java
 wget https://github.com/broadinstitute/cromwell/releases/download/66/cromwell-66.jar
 ##  ------------------------------------------------------------------------
 ## check/set up instance using your service account
-#wdl-runner is the name of my instance
+#wdl-runner is the name of my service account
 #genomics-3**1 is the project ID at GCP
 gcloud auth activate-service-account wdl-runner@genomics-3**1.iam.gserviceaccount.com --key-file=genomics-3**1-5**f.json --project=genomics-3**1
 gcloud auth login
