@@ -72,7 +72,7 @@ Upload the conf file and the credentials.json created earlier to the VM
 ssh to the cromwell server. Copy over the config file and the GATK wdl and json files. 
 
 ```java -Dconfig.file=PAPIv2-EU_version3.conf -jar cromwell-66.jar run  ~/gatk4-data-processing/processing-for-variant-discovery-gatk4.wdl \
--i ~/processing-for-variant-discovery-gatk4.hg38.wgs.inputs.json -o generic.google-papi.options.json```  
+-i ~/processing-for-variant-discovery-gatk4.hg38.wgs.inputs.json -o generic.google-papi.options.json ```  
 
 
 ## Creating NAT and configuring Private Google Access and Firewall
