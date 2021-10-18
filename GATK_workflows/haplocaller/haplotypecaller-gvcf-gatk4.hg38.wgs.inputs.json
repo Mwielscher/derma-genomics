@@ -1,0 +1,8 @@
+{
+  "HaplotypeCallerGvcf_GATK4.input_bam": "gs://genomics-324511/WGS/PreProcessingForVariantDiscovery_GATK4/ceda2849-93aa-4674-a0fe-1f26e257eaca/call-GatherBamFiles/NA12878.hg38.bam",
+  "HaplotypeCallerGvcf_GATK4.input_bam_index": "gs://genomics-324511/WGS/PreProcessingForVariantDiscovery_GATK4/ceda2849-93aa-4674-a0fe-1f26e257eaca/call-GatherBamFiles/NA12878.hg38.bai",
+  "HaplotypeCallerGvcf_GATK4.ref_dict": "gs://gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.dict",
+  "HaplotypeCallerGvcf_GATK4.ref_fasta": "gs://gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta",
+  "HaplotypeCallerGvcf_GATK4.ref_fasta_index": "gs://gcp-public-data--broad-references/hg38/v0/Homo_sapiens_assembly38.fasta.fai",
+  "HaplotypeCallerGvcf_GATK4.scattered_calling_intervals_list": "/home/matthias_wielscher/ref_data/hg38_wgs_scattered_calling_intervals.txt"
+}
