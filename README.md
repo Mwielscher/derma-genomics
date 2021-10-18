@@ -3,6 +3,9 @@
 2. [Set up your GCP project](#Instructions-to-use-the-Jupyterhub-on-the-VSC)
 
 
+4. [Creating NAT and configuring Private Google Access and Firewall](#Creating-NAT-and-configuring-Private-Google-Access-and-Firewall)
+
+
 ## About this Repository  
 This repository gives detailed instructions on how to use [Google Life Science API](https://cloud.google.com/life-sciences/docs/reference/rest) in connection with GATK best practices workflows from within the European Union. Workflows are written in [workflow description language](https://github.com/openwdl/wdl) and run by [cromwell workflow engine](https://cromwell.readthedocs.io/en/develop/) both developed and maintained at Broad Institute. The goal of this code repository is to get from [uBAM files](https://gatk.broadinstitute.org/hc/en-us/articles/360035532132-uBAM-Unmapped-BAM-Format) (i.e. raw files from WGS run) to [VCF files](https://samtools.github.io/hts-specs/VCFv4.2.pdf) in standardized and reproducible environment. 
 <br/><br/>
@@ -19,11 +22,14 @@ Create a regional standard Cloud Storage Bucket, it should be placed in the same
 I usually start with an e2-standard-4 instance and later adjust the size based on recommendation on the console. Smaller instances will still work as well.
 
 >* 1. Create new VM cromwell-server
->* 2. Set the zone to <zone>
+>* 2. Set the zone to \<zone\>
 >* 3. Select appropriate size based on expected number of workflows, you can start with e2-standard-4
 >* 4. Update Access scope to Allow full access to all Cloud APIs
->* 5. Expand Networking and add a network tag “cromwell-iap”
+>* 5. Expand Networking and add a network tag “cromwell-iap” (the why and how be described in [this section](#Creating-NAT-and-configuring-Private-Google-Access-and-Firewall))
 >* 6. Expand the network interface and change External IP address to ‘None’
 >* 7. Click Create
 
+
+
+## Creating NAT and configuring Private Google Access and Firewall
 
