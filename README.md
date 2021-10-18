@@ -27,9 +27,6 @@ __The architecture including all necessary components is given below:__
 * Create a regional standard Cloud __Storage Bucket__, it should be placed in the same region as the worker nodes. You can also consider using Dual or multi regions if the workers will be in multiple regions.
 
   
-## Deploy cromwell sql server 
-  fgf
-  fgf.    
 ## create a service account
 1. Click on IAM & Admin→Service Accounts  
 2. Click “Create Service Account”  
@@ -131,6 +128,14 @@ The instance type and disk size depends on the number of parallel pipelines expe
   
 ## Creating NAT and configuring Private Google Access and Firewall
 
+1. In VPC networks select the subnet for the <region> where the cromwell server and worker nodes will be provisioned
+<p align="center">
+<img src="/png/sql_access2.png" alt="sql_access2" width="500"/>
+<br/><br/>  
+2. Click ‘EDIT’
+3. Change ‘Private Google Access’ to ‘On’
+4. Click Save
+  
   
   
 ## Deploy cromwell sql server 
