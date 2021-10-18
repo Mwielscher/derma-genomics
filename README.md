@@ -29,7 +29,7 @@ __The architecture including all necessary components is given below:__
 ## create a service account
 1. Click on IAM & Admin→Service Accounts  
 2. Click “Create Service Account”  
-3. Enter Service account name e.g “cromwell-sa”  
+3. Enter Service account name e.g “wdl-runner”  
 4. Add appropriate description  
 5. Click “Create and Continue”  
 6. Add the following roles  
@@ -96,6 +96,23 @@ java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-69.jar run ~/gatk4-somatic-snvs-
 ~~~
 
 ## Provisioning MySQL server  
+
+There are many advantages to running Cromwell with MySQL, being able to run in server mode and submit multiple Jobs, sharing output and being able to view timing charts, resuming failed pipelines, etc.
+
+The instance type and disk size depends on the number of parallel pipelines expected to run. In this tutorial I start with a n1-standard-1 instance type and 20GB SSD disk which I found to  be more than enough to run a few parallel pipelines.  
+  
+1. Browse to Cloud SQL and Create Instance  
+2. Choose MySQL,  you may need to enable the API  
+3. Change to Single Zone availability  
+4. Update the Region/Zone to match cromwell server location  
+5. Click on Show Configuration options  
+6. Update Machine Type  
+7. Update Storage and resize if needed  
+8. Expand Connections and uncheck Public IP and select Private IP  
+9. Select the Network where the Server will be running, usually default  
+10. You may need to set-up Private service access connection if you have not done this before for this VPC, Click Enable API  and selec ‘Use an automatically allocated IP range. Click Continue, then Create Connection  
+
+  
 
   
 ## Creating NAT and configuring Private Google Access and Firewall
