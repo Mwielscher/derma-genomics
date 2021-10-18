@@ -110,9 +110,17 @@ The instance type and disk size depends on the number of parallel pipelines expe
 7. Update Storage and resize if needed  
 8. Expand Connections and uncheck Public IP and select Private IP  
 9. Select the Network where the Server will be running, usually default  
-10. You may need to set-up Private service access connection if you have not done this before for this VPC, Click Enable API  and selec ‘Use an automatically allocated IP range. Click Continue, then Create Connection  
-
+10. You may need to set-up Private service access connection if you have not done this before for this VPC, Click Enable API  and select ‘Use an automatically allocated IP range. Click Continue, then Create Connection as outlined below:  
+<p align="center">
+<img src="/png/sql_access.png" alt="sql_access1" width="600"/>
+<br/>
+<p align="center">
+<img src="/png/sql_access2.png" alt="sql_access2" width="500"/>
+<br/><br/>  
   
+11. Click on create instance  
+12. Once the database has been created, click on the instance, then Databases and create a new database “cromwell”  
+13. Note the private ip address <db-ipaddress> as it will be used later in the config file  
 
   
 ## Creating NAT and configuring Private Google Access and Firewall
