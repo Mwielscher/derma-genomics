@@ -26,6 +26,10 @@ __The architecture including all necessary components is given below:__
 * We will be using the following __APIs:__ (either with as user or via the service account we will be creating for this) Compute Engine API, Cloud Life Sciences API, Dataflow API, Cloud Logging API, Cloud Deployment Manager V2 API, Cloud Monitoring API, BigQuery API, Cloud SQL Admin API, Cloud Resource Manager API, Service Usage API, Service Networking API, BigQuery Storage API, Cloud Datastore API, Cloud Debugger API, Cloud OS Login API, Cloud SQL, Cloud Storage, Cloud Storage API, Cloud Trace API, Genomics API, Google Cloud APIs, Google Cloud Storage JSON API,Service Management API  
 * Create a regional standard Cloud __Storage Bucket__, it should be placed in the same region as the worker nodes. You can also consider using Dual or multi regions if the workers will be in multiple regions.
 
+  
+## Deploy cromwell sql server 
+  fgf
+  fgf.    
 ## create a service account
 1. Click on IAM & Admin→Service Accounts  
 2. Click “Create Service Account”  
