@@ -70,10 +70,24 @@ Upload the conf file and the credentials.json created earlier to the VM
 
 ssh to the cromwell server. Copy over the config file and the GATK wdl and json files. 
 
+run the preprocessing pipeline:
 ~~~
- java -Dconfig.file=PAPIv2-EU_version3.conf -jar cromwell-66.jar run  ~/gatk4-data-processing/processing-for-variant-discovery-gatk4.wdl \
+ java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-66.jar run  ~/gatk4-data-processing/processing-for-variant-discovery-gatk4.wdl \
 -i ~/processing-for-variant-discovery-gatk4.hg38.wgs.inputs.json -o generic.google-papi.options.json
 ~~~  
+
+run haplocaller:
+
+~~~
+java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-66.jar run ~/gatk4-germline-snps-indels/haplotypecaller-gvcf-gatk4.wdl \
+-i ~/haplotypecaller-gvcf-gatk4.hg38.wgs.inputs.json 
+~~~
+
+run mutect2 to call somatic variants:
+~~~
+java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-69.jar run ~/gatk4-somatic-snvs-indels/mutect2.wdl \
+-i ~/mutect2.inputs.json -o generic.google-papi.options.json
+~~~
 
 
 
