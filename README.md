@@ -4,14 +4,20 @@
 3. [create a service account](#create-a-service-account)
 4. [provision and set up a cromwell server](provision-and-set-up-a-cromwell-server)  
 5. [run GATK best practices workflows](run-GATK-best-practices-workflows)
-6. [Creating NAT and configuring Private Google Access and Firewall](#Creating-NAT-and-configuring-Private-Google-Access-and-Firewall)
-7. [Deploy cromwell sql server](Deploy-cromwell-sql-server)
+6. [Provisioning MySQL server](Provisioning-MySQL-server)
+7. [Creating NAT and configuring Private Google Access and Firewall](#Creating-NAT-and-configuring-Private-Google-Access-and-Firewall)
+8. [Deploy cromwell sql server](Deploy-cromwell-sql-server)
 
 
 
 ## About this Repository  
-This repository gives detailed instructions on how to use [Google Life Science API](https://cloud.google.com/life-sciences/docs/reference/rest) in connection with GATK best practices workflows from within the European Union. Workflows are written in [workflow description language](https://github.com/openwdl/wdl) and run by [cromwell workflow engine](https://cromwell.readthedocs.io/en/develop/) both developed and maintained at Broad Institute. The goal of this code repository is to get from [uBAM files](https://gatk.broadinstitute.org/hc/en-us/articles/360035532132-uBAM-Unmapped-BAM-Format) (i.e. raw files from WGS run) to [VCF files](https://samtools.github.io/hts-specs/VCFv4.2.pdf) in standardized and reproducible environment. 
+This repository gives detailed instructions on how to use [Google Life Science API](https://cloud.google.com/life-sciences/docs/reference/rest) in connection with GATK best practices workflows from within the European Union. Workflows are written in [workflow description language](https://github.com/openwdl/wdl) and run by [cromwell workflow engine](https://cromwell.readthedocs.io/en/develop/) both developed and maintained at Broad Institute. The goal of this code repository is to get from [uBAM files](https://gatk.broadinstitute.org/hc/en-us/articles/360035532132-uBAM-Unmapped-BAM-Format) (i.e. raw files from WGS run) to [VCF files](https://samtools.github.io/hts-specs/VCFv4.2.pdf) in standardized and reproducible environment.  
+
+__The architecture including all necessary components is given below:__  
+<p align="center">
+<img src="/png/architecture.png" alt="architecture" width="700"/>
 <br/><br/>
+
 
 ## set up your GCP project
 
@@ -89,10 +95,13 @@ java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-69.jar run ~/gatk4-somatic-snvs-
 -i ~/mutect2.inputs.json -o generic.google-papi.options.json
 ~~~
 
+## Provisioning MySQL server  
 
-
+  
 ## Creating NAT and configuring Private Google Access and Firewall
 
+  
+  
 ## Deploy cromwell sql server 
 
 
