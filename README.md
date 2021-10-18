@@ -29,7 +29,7 @@ I usually start with an e2-standard-4 instance and later adjust the size based o
 >* 6. Expand the network interface and change External IP address to ‘None’
 >* 7. Click Create
 
-to run cromwell on this instance follow the installation requirements in this script. 
+to run cromwell on this instance follow the installation requirements in this script(/cromwell_server/setp_cromwell.sh). 
 
 
 ## Creating NAT and configuring Private Google Access and Firewall
