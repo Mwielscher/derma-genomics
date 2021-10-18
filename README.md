@@ -2,8 +2,11 @@
 1. [About this Repository](#About-this-Repository)
 2. [Set up your GCP project](#Instructions-to-use-the-Jupyterhub-on-the-VSC)
 3. [create a service account](#create-a-service-account)
-4. [provision and set up a cromwell server](provision-and-set-up-a-cromwell-server)
-5. [Creating NAT and configuring Private Google Access and Firewall](#Creating-NAT-and-configuring-Private-Google-Access-and-Firewall)
+4. [provision and set up a cromwell server](provision-and-set-up-a-cromwell-server)  
+5. [run GATK best practices workflows](run-GATK-best-practices-workflows)
+6. [Creating NAT and configuring Private Google Access and Firewall](#Creating-NAT-and-configuring-Private-Google-Access-and-Firewall)
+7. [Deploy cromwell sql server](Deploy-cromwell-sql-server)
+
 
 
 ## About this Repository  
@@ -49,8 +52,31 @@ I usually start with an e2-standard-4 instance and later adjust the size based o
 
 to run cromwell on this instance follow the installation requirements in this [script](/cromwell_server/setup_cromwell.sh) (to be replaced by docker file) 
 
+Updating the [conf file](/cromwell_server/PAPIv2-EU.conf)
 
+Edit the following values
+* project-id 
+* service account email
+* storage-bucket 
+* Location and endpoint-url if not using us-central1
+* zones (set to europe-west4)
+* database IP and password 
+* 
+Upload the conf file and the credentials.json created earlier to the VM
+
+
+
+
+## run GATK best practices workflows 
+
+ssh to the cromwell server. Copy over the config file and the GATK wdl and json files. 
+
+```java -Dconfig.file=PAPIv2-EU_version3.conf -jar cromwell-66.jar run  ~/gatk4-data-processing/processing-for-variant-discovery-gatk4.wdl \
+-i ~/processing-for-variant-discovery-gatk4.hg38.wgs.inputs.json -o generic.google-papi.options.json```  
 
 
 ## Creating NAT and configuring Private Google Access and Firewall
+
+## Deploy cromwell sql server 
+
 
