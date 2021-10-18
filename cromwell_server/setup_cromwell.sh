@@ -5,6 +5,9 @@ sudo apt install git
 sudo apt-get install screen
 curl -s "https://get.sdkman.io" | bash
 sdk install java
+## alternative way to install java:
+sudo apt update
+sudo apt install -y git wget openjdk-11-jdk 
 wget https://github.com/broadinstitute/cromwell/releases/download/66/cromwell-66.jar
 ##  ------------------------------------------------------------------------
 ## check/set up instance using your service account
