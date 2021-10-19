@@ -2,11 +2,11 @@
 1. [About this Repository](#About-this-Repository)
 2. [Set up your GCP project](#Instructions-to-use-the-Jupyterhub-on-the-VSC)
 3. [create a service account](#create-a-service-account)
-4. [provision and set up a cromwell server](provision-and-set-up-a-cromwell-server)  
-5. [run GATK best practices workflows](run-GATK-best-practices-workflows)
-6. [Provisioning MySQL server](Provisioning-MySQL-server)
+4. [provision and set up a cromwell server](#provision-and-set-up-a-cromwell-server)  
+5. [run GATK best practices workflows](#run-GATK-best-practices-workflows)
+6. [Provisioning MySQL server](#Provisioning-MySQL-server)
 7. [Creating NAT and configuring Private Google Access and Firewall](#Creating-NAT-and-configuring-Private-Google-Access-and-Firewall)
-8. [Deploy cromwell sql server](Deploy-cromwell-sql-server)
+8. [Deploy cromwell sql server](#Deploy-cromwell-sql-server)
 
 
 
@@ -72,7 +72,6 @@ Edit the following values
 Upload the conf file and the credentials.json created earlier to the VM
 
 
-
 ## run GATK best practices workflows
   
 
@@ -101,6 +100,8 @@ java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-69.jar run ~/gatk4-somatic-snvs-
   
  
 ## Provisioning MySQL server
+  
+
 There are many advantages to running Cromwell with MySQL, being able to run in server mode and submit multiple Jobs, sharing output and being able to view timing charts, resuming failed pipelines, etc.
 
 The instance type and disk size depends on the number of parallel pipelines expected to run. In this tutorial I start with a n1-standard-1 instance type and 20GB SSD disk which I found to  be more than enough to run a few parallel pipelines.  
