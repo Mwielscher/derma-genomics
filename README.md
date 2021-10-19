@@ -45,8 +45,8 @@ __The architecture including all necessary components is given below:__
 
 
 
-## provision and set up a Cromwell server  
-
+## provision and set up a Cromwell server
+  
 I usually start with an e2-standard-4 instance and later adjust the size based on recommendation on the console. Smaller instances will still work as well.
 
 >* 1. Create new VM cromwell-server
@@ -73,7 +73,8 @@ Upload the conf file and the credentials.json created earlier to the VM
 
 
 
-## run GATK best practices workflows 
+## run GATK best practices workflows
+  
 
 ssh to the cromwell server. Copy over the config file and the GATK wdl and json files. 
 
@@ -99,7 +100,7 @@ java -Dconfig.file=PAPIv2-EU.conf -jar cromwell-69.jar run ~/gatk4-somatic-snvs-
   
   
  
-## Provisioning MySQL server  
+## Provisioning MySQL server
 There are many advantages to running Cromwell with MySQL, being able to run in server mode and submit multiple Jobs, sharing output and being able to view timing charts, resuming failed pipelines, etc.
 
 The instance type and disk size depends on the number of parallel pipelines expected to run. In this tutorial I start with a n1-standard-1 instance type and 20GB SSD disk which I found to  be more than enough to run a few parallel pipelines.  
