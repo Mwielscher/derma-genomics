@@ -163,5 +163,11 @@ __Create Cloud NAT:__
   
   
 ## Deploy cromwell sql server 
+  
+__Creating and starting cromwell service:__  
+Create simple service file 
+  
+  
+
 
 
