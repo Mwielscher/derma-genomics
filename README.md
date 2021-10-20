@@ -130,7 +130,7 @@ The instance type and disk size depends on the number of parallel pipelines expe
   
 ## Creating NAT and configuring Private Google Access and Firewall
 
-1. In VPC networks select the subnet for the <region> where the cromwell server and worker nodes will be provisioned  
+1. In VPC default networks select the subnet (click default in subnet column) on default for the \<region\> where the cromwell server and worker nodes will be provisioned  
 <p align="center">
 <img src="/png/VPC_networks.png" alt="VPC_net" width="600"/>
 <br/><br/>  
@@ -139,10 +139,11 @@ The instance type and disk size depends on the number of parallel pipelines expe
 3. Change ‘Private Google Access’ to ‘On’  
 4. Click Save  
   
+ 
   
 __Add Firewall rule to allow access from IAP IP range:__   
   
-1. Click on Firewall  
+1. Within VPC network Click on Firewall  
 2. Click ‘Create a Firewall rule’  
 3. Add appropriate name e.g. allow-cromwell-iap-access  
 4. Make sure the correct network is selected  
@@ -155,7 +156,7 @@ __Add Firewall rule to allow access from IAP IP range:__
   
 __Create Cloud NAT:__  
 
-1. Click on Network Services→Cloud NAT  
+1. Click on Network Services→Cloud NAT (search cloud NAT) 
 2. Click ‘CREATE NAT GATEWAY’  
 3. Add name e.g. cromwell-nat  
 4. Select network (usually default) and region \<region\>  
