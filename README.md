@@ -168,9 +168,30 @@ __Create Cloud NAT:__
 ## Deploy cromwell sql server 
   
 __Creating and starting cromwell service:__  
-Create simple service file 
+1. Create simple service file:   
+Using your favourite text editor as root create a file /etc/systemd/system/cromwell.service  
+~~~  
+sudo vim /etc/systemd/system/cromwell.service
+~~~
+   
+~~~
+[Unit]
+Description=Cromwell Server
+After=network.target
+[Service]
+User=root
+Group=root
+Restart=always
+TimeoutStopSec=10
+RestartSec=5
+WorkingDirectory=/home/matthias_wielscher/
+ExecStart=/usr/bin/java -Dconfig.file=PAPIv2-EU_github.conf -jar cromwell-66.jar server
+[Install] 
+ExecStart=WantedBy=multi-user.target
+~~~
+  
+2. exit and save   
+
   
   
-
-
-
+  
