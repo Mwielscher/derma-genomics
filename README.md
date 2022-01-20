@@ -83,6 +83,7 @@ run the preprocessing pipeline:
 -i ~/processing-for-variant-discovery-gatk4.hg38.wgs.inputs.json -o generic.google-papi.options.json
 ~~~  
 
+  
 run haplocaller:
 
 ~~~
@@ -96,8 +97,6 @@ java -Dconfig.file=PAPIv2-EU.conf -jar cromwell.jar run ~/gatk4-somatic-snvs-ind
 -i ~/mutect2.inputs.json -o generic.google-papi.options.json
 ~~~
 
-  
-  
  
 ## Provisioning MySQL server
   
